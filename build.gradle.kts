@@ -50,12 +50,16 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
 
-    // https://mvnrepository.com/artifact/com.nhaarman.mockitokotlin2/mockito-kotlin
     testImplementation ("com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-alpha01")
-
     testImplementation("org.assertj:assertj-core:3.23.1")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     implementation("org.springdoc:springdoc-openapi-ui:1.6.11")
+
+    implementation ("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+    implementation ("com.fasterxml.jackson.datatype:jackson-datatype-jdk8")
+
+    implementation ("org.springframework.data:spring-data-redis")
+    implementation ("io.lettuce:lettuce-core")
 
     implementation ("com.querydsl:querydsl-jpa:${queryDslVersion}")
     kapt ("com.querydsl:querydsl-apt:${queryDslVersion}:jpa")
